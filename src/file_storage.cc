@@ -8,7 +8,7 @@ explicit FileStorage::FileStorage(const std::string& filepath)
 // key-value pairs are seperated with ":".
 // Each key-value pair is stored in a new line.
 // Returns std::nullopt if the file does not exist.
-std::optional<FileStorage::KVMap> FileStorage::Load() {
+std::optional<FileStorage::KVMap> FileStorage::Load() const {
   std::ifstream in(filepath_);
   std::string line;
   KVMap kv_map;
@@ -27,7 +27,7 @@ std::optional<FileStorage::KVMap> FileStorage::Load() {
 // Overwrites existing content.
 // key-value pairs are seperated with ":".
 // Each key-value pair is stored in a new line.
-void FileStorage::Save(const KVMap& kv_map) {
+void FileStorage::Save(const KVMap& kv_map) const {
   std::ofstream out(filepath_, std::ios::trunc);
   if (out.is_open()) {
     for (const auto& [key, value] : kv_map) {

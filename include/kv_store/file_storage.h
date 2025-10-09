@@ -1,3 +1,5 @@
+// MIT License
+
 #ifndef KV_STORE_INCLUDE_KV_STORE_FILE_STORAGE
 #define KV_STORE_INCLUDE_KV_STORE_FILE_STORAGE
 
@@ -16,10 +18,10 @@ class FileStorage {
 
   // Save the key-value pairs to the file. 
   // Existing content will be overwritten.
-  void Save(const KVMap& kv_map);
+  void Save(const KVMap& kv_map) const;
   // Load the key-value pairs from the file. 
   // Returns std::nullopt if the file does not exist.
-  std::optional<KVMap> Load();
+  std::optional<KVMap> Load() const;
 
  private:
   std::string filepath_;
