@@ -3,7 +3,6 @@
 #ifndef KV_STORE_INCLUDE_KV_STORE_CLI_INTERFACE
 #define KV_STORE_INCLUDE_KV_STORE_CLI_INTERFACE
 
-#include <iostream>
 #include <string>
 
 // CLIInterface class provides a command-line interface for interacting with the

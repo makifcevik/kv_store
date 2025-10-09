@@ -1,5 +1,7 @@
 #include "kv_store/cli_interface.h"
 
+#include <iostream>
+
 // Main CLI Loop. Keeps retrieving and processing user input commands.
 // Commands are written on command local variable
 void CLIInterface::Run() {
