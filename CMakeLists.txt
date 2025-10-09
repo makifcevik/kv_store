@@ -11,5 +11,9 @@ endif()
 
 project ("kv_store")
 
+# Add include directory globally (available to all subprojects)
+include_directories("${CMAKE_SOURCE_DIR}/include")
+
 # Include sub-projects.
 add_subdirectory ("src")
+
