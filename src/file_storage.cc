@@ -2,7 +2,7 @@
 
 #include <fstream>
 
-explicit FileStorage::FileStorage(const std::string& filepath)
+FileStorage::FileStorage(const std::string& filepath)
     : filepath_(filepath) {}
 
 // key-value pairs are seperated with ":".
