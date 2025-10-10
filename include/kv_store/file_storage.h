@@ -1,7 +1,7 @@
 // MIT License
 
-#ifndef KV_STORE_INCLUDE_KV_STORE_FILE_STORAGE
-#define KV_STORE_INCLUDE_KV_STORE_FILE_STORAGE
+#ifndef KV_STORE_FILE_STORAGE_H
+#define KV_STORE_FILE_STORAGE_H
 
 #include <string>
 #include <unordered_map>
@@ -27,4 +27,4 @@ class FileStorage {
   std::string filepath_;
 };
 
-#endif  // !KV_STORE_INCLUDE_KV_STORE_FILE_STORAGE
+#endif  // !KV_STORE_FILE_STORAGE_H

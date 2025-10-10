@@ -1,7 +1,7 @@
 // MIT License
 
-#ifndef KV_STORE_INCLUDE_KV_STORE_CLI_INTERFACE
-#define KV_STORE_INCLUDE_KV_STORE_CLI_INTERFACE
+#ifndef KV_STORE_CLI_INTERFACE_H
+#define KV_STORE_CLI_INTERFACE_H
 
 #include <memory>
 #include <string>
@@ -39,4 +39,4 @@ class CLIInterface {
 
   UniqueEngine engine_;
 };
-#endif  // !KV_STORE_INCLUDE_KV_STORE_CLI_INTERFACE
+#endif  // !KV_STORE_CLI_INTERFACE_H

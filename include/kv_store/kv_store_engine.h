@@ -1,7 +1,7 @@
 // MIT License
 
-#ifndef KV_STORE_INCLUDE_KV_STORE_KV_STORE_ENGINE
-#define KV_STORE_INCLUDE_KV_STORE_KV_STORE_ENGINE
+#ifndef KV_STORE_KV_STORE_ENGINE_H
+#define KV_STORE_KV_STORE_ENGINE_H
 
 #include <string>
 #include <unordered_map>
@@ -15,6 +15,7 @@
 // KVStoreEngine class provides in-memory key-value storage with basic operations.
 // It provides public methods to encapsulate business logic.
 // Does not persist changes to the file until Persist() is called.
+// Not thread-safe.
 
 class KVStoreEngine {
  public:
@@ -43,4 +44,4 @@ class KVStoreEngine {
   UniqueFileStorage storage_;
 };
 
-#endif  // !KV_STORE_INCLUDE_KV_STORE_KV_STORE_ENGINE
+#endif  // !KV_STORE_KV_STORE_ENGINE_H
