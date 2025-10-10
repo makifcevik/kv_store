@@ -13,4 +13,11 @@ add_executable (kv_store
 "file_storage.cc" 
 "cli_interface.cc")
 
+add_custom_command(
+    TARGET kv_store POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_SOURCE_DIR}/data"
+            "$<TARGET_FILE_DIR:kv_store>/data"
+)
+
 # target_include_directories(kv_store PRIVATE "${CMAKE_SOURCE_DIR}/include")

@@ -1,9 +1,9 @@
 #include "kv_store/file_storage.h"
 
 #include <fstream>
+#include <iostream>
 
-FileStorage::FileStorage(const std::string& filepath)
-    : filepath_(filepath) {}
+FileStorage::FileStorage(const std::string& filepath) : filepath_(filepath) {}
 
 // key-value pairs are seperated with ":".
 // Each key-value pair is stored in a new line.
@@ -13,11 +13,14 @@ std::optional<FileStorage::KVMap> FileStorage::Load() const {
   std::string line;
   KVMap kv_map;
   if (in.is_open()) {
+    std::cout << "Loading data from " << filepath_ << "...\n";
     while (std::getline(in, line)) {
-      int32_t pos = line.find(":");
-      std::string key = line.substr(0, pos);
-      std::string value = line.substr(pos + 1);
-      kv_map[key] = value;
+      size_t pos = line.find(":");
+      if (pos != std::string::npos) {
+        std::string key = line.substr(0, pos);
+        std::string value = line.substr(pos + 1);
+        kv_map[key] = value;
+      }
     }
     return kv_map;
   }

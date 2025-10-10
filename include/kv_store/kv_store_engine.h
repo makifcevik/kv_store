@@ -7,8 +7,9 @@
 #include <unordered_map>
 #include <optional>
 #include <memory>
+#include "file_storage.h"
 
-class FileStorage;
+//class FileStorage;
 
 // The core business logic layer.
 // KVStoreEngine class provides in-memory key-value storage with basic operations.
@@ -27,8 +28,8 @@ class KVStoreEngine {
   // If you do not want to override existing values, check with Get() first.
   void Set(const std::string& key, const std::string& value);
 
-  // Returns std::nullopt if the key does not exist.
   std::optional<std::string> Get(const std::string& key) const;
+  std::optional<KVMap> GetAll() const;
 
   // Does not persist changes to the file until Persist() is called.
   // Returns true if the key existed and was deleted, false otherwise.
