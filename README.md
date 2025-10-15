@@ -57,6 +57,7 @@ The project is organized into the following directories:
       * `main.cc`: The main entry point of the application.
   * `data/`: Contains the data file for the key-value store.
       * `data.txt`: The default file for storing key-value pairs.
+  * `tests/`: Contains the tests of the project.
 
 -----
 
