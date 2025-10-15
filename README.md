@@ -2,21 +2,15 @@
 
 A simple, file-based key-value store implemented in C++ following **Google C++ standards**. This project provides a command-line interface (CLI) for storing, retrieving, and deleting key-value pairs.
 
------
-
 ## Features
 
   * **Persistent Storage:** Key-value pairs are stored in a .txt file, ensuring data persistence across sessions.
   * **Command-Line Interface:** Interact with the key-value store through a simple and intuitive CLI.
   * **Core Engine:** A robust key-value store engine which handles the core logic of data management.
 
------
-
 ## Prerequisites
 
 You can build an run this project with **CMake** provided that you have both **CMake** and a **C++** compiler installed on your system.
-
------
 
 ## Usage
 
@@ -40,8 +34,6 @@ You can interact with the key-value store using the command-line interface. Here
     delete mykey
     ```
 
------
-
 ## Project Structure
 
 The project is organized into the following directories:
@@ -57,6 +49,7 @@ The project is organized into the following directories:
       * `main.cc`: The main entry point of the application.
   * `data/`: Contains the data file for the key-value store.
       * `data.txt`: The default file for storing key-value pairs.
+  * `tests/`: Contains the tests of the project.
 
 -----
 
