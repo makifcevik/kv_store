@@ -52,7 +52,7 @@ TEST_F(KVStoreEngineTest, Persist_SavesToFile) {
   engine.Persist();
   // Simulate a new instance loading the data from the file.
   KVStoreEngine new_engine(CreateFileStorage());
-  auto loaded = engine.GetAll();
+  auto loaded = new_engine.GetAll();
   // Assert
   ASSERT_TRUE(loaded.has_value());
   EXPECT_EQ(loaded->at("key1"), "value1");
